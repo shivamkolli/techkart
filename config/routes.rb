@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "products#index"
 
   devise_scope :user do
-  	# get "users/profile", to: "users#profile"
+  	get "users/profile", to: "users#profile"
   end
 
   resources :products do
