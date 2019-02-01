@@ -1,0 +1,9 @@
+wb = xlsx_package.workbook
+
+wb.add_worksheet(name: "Users") do |sheet|
+  sheet.add_row %w(Name Model Brand Year RAM ExternalStorage)
+  
+  @products.each do |product|
+    sheet.add_row [product.name, product.model, product.brand, product.year, product.random_access_memory, product.external_storage]
+  end
+end

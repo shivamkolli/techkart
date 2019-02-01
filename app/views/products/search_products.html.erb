@@ -1,0 +1,4 @@
+<div>
+  <%= link_to "Export Users In Excelsheet", download_excel_products_path(:query_data => @query_data, format: "xlsx") %>
+</div>
+<%= render :partial => 'products' %>

@@ -1,0 +1,22 @@
+<br>
+<h4>Product List</h4>
+
+<%= form_tag("/search_products", method: "get") do %>
+  <%= label_tag "model" %></br>
+  <%= text_field_tag "product[model]"%></br>
+  <%= label_tag "brand" %></br>
+  <%= text_field_tag "product[brand]"%></br>
+  <%= label_tag "year" %></br>
+  <%= text_field_tag "product[year]"%></br>
+  <%= label_tag "random_access_memory" %></br>
+  <%= text_field_tag "product[random_access_memory]"%></br>
+  <%= label_tag "external_storage" %></br>
+  <%= text_field_tag "product[external_storage]"%></br>
+  <%= submit_tag("Search") %>
+<% end %>
+
+<%= render :partial => 'products' %>
+
+<div class='text-center'>
+  <%= paginate @products %>
+</div>

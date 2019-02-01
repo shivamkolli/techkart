@@ -1,0 +1,33 @@
+<div class="container">
+	<div class="row">
+		<div class="table-responsive table-bordered movie-table">
+      <table class="table movie-table">
+        <thead>
+          <tr class= "movie-table-head">
+            <th>Name</th>
+            <th>Model</th>
+            <th>Brand</th>
+            <th>Year</th>
+            <th>RAM</th>
+            <th>External Storage</th>
+          </tr>
+        </thead>   
+        <tbody> 
+          <!--row-->
+          <% if @products.present? %>
+            <% @products.each do |product|%>
+              <tr class= "dark-row">
+                <td><%= product.name %></td>
+                <td><%= product.model %></td>
+                <td><%= product.brand %></td>                                      
+                <td><%= product.year %></td>
+                <td><%= product.random_access_memory %></td>
+                <td><%= product.external_storage %></td>
+              </tr>
+            <%end%>
+          <%end%>  
+        </tbody>
+      </table>
+    </div>
+	</div>
+</div>
