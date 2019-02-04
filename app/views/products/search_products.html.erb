@@ -1,5 +1,7 @@
 <div>
+<% if @products.present? %>
   <%= link_to "Export Users In Excelsheet", download_excel_products_path(:query_data => @query_data, format: "xlsx") %>
+<% end %>
 </div>
 <br>
 <div>
